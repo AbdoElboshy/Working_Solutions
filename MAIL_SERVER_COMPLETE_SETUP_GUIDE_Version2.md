@@ -630,6 +630,15 @@ deny
   message   = No reverse DNS found for your IP address
   senders   = :
   !verify   = reverse_host_lookup
+
+# ================================================
+# BLOCK ALL EMPTY SENDER COMPLETELY
+# ================================================
+deny
+message = Rejected: Empty sender not accepted on this server
+  senders = :
+
+        # (your existing rules below this)
 ```
 
 ### Apply and verify
